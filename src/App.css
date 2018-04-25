@@ -1,0 +1,87 @@
+body{
+  font-family: "Open Sans",serif;
+}
+
+.wrapper{
+  background: linear-gradient(to right, #e67e22, #e74c3c);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main{
+  height: 90vh;
+  background: #fff;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  width: 80%;
+  margin: 0;
+}
+
+.title-container{
+  height: 90vh;
+  background: url("http://lemondropskincare.com/wp-content/uploads/2015/06/Lohrville-in-Autumn.jpg") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  
+}
+
+.title-container__title{
+  font-size: 50px;
+  letter-spacing: 2px;
+  line-height: 1.5px;
+  font-family: 'Roboto Slab',serif;
+}
+
+.form-container{
+  background-color: #2c3e50;
+  height: 90vh;
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+input[type="text"]{
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 1px #f16051;
+  width: 30%;
+  padding-bottom: 4px;
+  color: #fff !important;
+  font-weight:lighter;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  font-size:20px;
+}
+
+.title-container__subtitle{
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: 1px;
+  line-height: 4;
+  font-family: "Merriweather", serif;
+}
+
+.weather__key{
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: 1px;
+  line-height: 4;
+  font-family: "Merriweather", serif;
+  color: #f16051;
+  font-size:20px;
+}
+
+.weather__value{
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: 1px;
+  line-height: 4;
+  font-family: "Merriweather", serif;
+  color: #fff;
+  font-size:20px;
+}

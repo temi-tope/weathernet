@@ -8,6 +8,7 @@ const API_KEY = "70d368f1fc63f4d0014c5b1907372cee";
 // initializing a component
 class App extends React.Component {
   //r functions allows you to use the this keyword independently
+  
   state = {
     temperture: undefined,
     city: undefined,
@@ -19,12 +20,13 @@ class App extends React.Component {
 
   getWeather = async (e) => {
     e.preventDefault();
-    const city = e.target.elements.city.value;
-    const country = e.target.elements.country.value;
+    try{
+    const city = e.target.city.value;
+    const country = e.target.country.value;
     const API_CALL = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
     const data = await API_CALL.json();
     if (city && country) {
-      console.log(data);
+      //console.log(data);
       this.setState({
         temperture: data.main.temp,
         city: data.name,
@@ -33,7 +35,8 @@ class App extends React.Component {
         description: data.weather[0].description,
         error: ""
       });
-    } else {
+    } else{
+      console.log(data);
       this.setState({
         temperture: undefined,
         city: undefined,
@@ -43,7 +46,14 @@ class App extends React.Component {
         error: "Please enter a correct value"
       });
     }
-  }
+    }
+      catch(Exception){
+        this.setState({
+          error: "Please enter a correct value"
+        });
+      }
+    }
+  
 
 
   // render methods returnd a jsx(looks like html but its a javascript code runing in the background)
